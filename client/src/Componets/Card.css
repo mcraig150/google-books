@@ -1,0 +1,21 @@
+  
+.Book {
+    width: 250px;
+    height: 275px;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 25px;
+    transition: transfrom 175ms ease-in;
+}
+
+.Book:hover {
+    transform: scale(1.05);
+}
+
+
+.Book__text {
+    padding: 5px;
+}
