@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FavHeader from "../Componets/FavHeader";
 import Api from "../Util/Api";
-import Card from "../Componets/Card";
+import FavCard from "../Componets/FavCard";
 
 export class Favorites extends Component {
   constructor() {
@@ -32,7 +32,7 @@ export class Favorites extends Component {
         <FavHeader />
         <div className="Books">
           {books.map((book) => (
-            <Card book={book} />
+            <FavCard book={book} />
           ))}
         </div>
       </div>

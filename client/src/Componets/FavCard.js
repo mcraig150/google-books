@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./Card.css";
 import TextTruncate from "react-text-truncate";
 import { IconButton } from '@material-ui/core';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import DeleteIcon from '@material-ui/icons/Delete';
 import Api from '../Util/Api'
-export class Card extends Component {
+export class FavCard extends Component {
 
   constructor() {
     super();
@@ -14,15 +14,11 @@ export class Card extends Component {
   }
 
   handleClick() {
-    let favBook = {
-      title: this.props.book.title,
-      author: this.props.book.author,
-      image: this.props.book.image
-    }
+    let book = this.props.book._id;
 
-    Api.sendBooks(favBook)
+    Api.removeBook(book)
  
-    console.log(favBook)
+    console.log(book)
   }
 
   render() {
@@ -51,7 +47,7 @@ export class Card extends Component {
             />
 
             <IconButton className='fav' onClick = {this.handleClick.bind(this)}>
-              <FavoriteBorderIcon />
+              <DeleteIcon />
             </IconButton>
             
           </div>
@@ -61,4 +57,4 @@ export class Card extends Component {
   }
 }
 
-export default Card;
+export default FavCard;

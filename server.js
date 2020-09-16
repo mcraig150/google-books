@@ -34,7 +34,7 @@ app.get("/books", (req, res) => {
   });
 });
 
-app.delete("/api/delete/:id", (req, res) => {
+app.delete("/delete/:id", (req, res) => {
   Book.deleteOne({ _id: req.params.id }, (err) => {
     if (err) {
       res.status(500).send(err);

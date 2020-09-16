@@ -6,5 +6,11 @@ export default {
     },
     getBooks: function() {
         return axios.get('/books');
-    } 
+    }, 
+    sendBooks: function(book) {
+        return axios.post('/api/book', book)
+    },
+    removeBook: function(book) {
+        return axios.delete('/delete/'+ book)
+    }
 }
