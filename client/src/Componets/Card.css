@@ -19,3 +19,14 @@
 .Book__text {
     padding: 5px;
 }
+
+.Book__pic {
+    margin-left: auto; 
+    margin-right: auto;
+    width: 125px;
+    height: 175px;
+}
+
+.favButton {
+    float: right;
+}

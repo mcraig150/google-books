@@ -12,7 +12,9 @@ export class Books extends Component {
   }
 
   componentDidUpdate(Props) {
-    this.searchBook();
+    if(Props !== this.props) {
+      this.searchBook();
+    }
   }
 
   searchBook() {
@@ -46,7 +48,6 @@ export class Books extends Component {
 
 
   render() {
-    console.log(this.props.search)
     let books = this.state.books;
     return (
       <div className='Books'>
